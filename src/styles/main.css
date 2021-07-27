@@ -1,0 +1,380 @@
+img {
+    display: block;
+    width: 100%;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 12px;
+    color: #424242;
+}
+
+a, button {
+    min-height: 44px;
+    min-width: 44px;
+}
+
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background-color: #fff;
+    color: #b00d0f;
+    padding: 8px;
+    z-index: 100;
+ }
+  
+ .skip-link:focus {
+    top: 0;
+ }
+
+/*
+ * header
+ */
+
+ .header {
+    display: grid; 
+    min-height: 56px;
+    transition: min-height 0.3s;
+}
+
+.header__inner {
+    width: 100%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header__title {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-size: 4em;
+    margin: 0.5em 0.25em;
+    display: inline-block;
+    color: #b00d0f;
+}
+
+.header__menu {
+    min-height: 44px;
+    font-size: 32px;
+    margin: 10px auto;
+    display: block;
+    min-width: 44px;
+}
+
+/*
+ * nav
+ */
+
+.nav {
+    background-color: #b00d0f;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.nav__list {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.nav__item {
+    font-size: large;
+    font-weight: bolder;
+    box-sizing: border-box;
+    display: inline-block;
+    width: 24%;
+    text-align: center;
+    line-height: 24px;
+    text-transform: uppercase;
+}
+
+.nav a {
+    display: inline-block;
+    padding: 1.3em;
+    text-decoration: none;
+    color:#fff;
+}
+
+.nav a:hover {
+    text-decoration: none;
+    text-shadow: 2px 2px 5px white;
+}
+
+/*
+ * jumbotron
+ */
+
+ .hero {
+    display: flex;
+    align-items: center;
+    min-height: 380px;
+    width: 100%;
+    text-align: center;
+    background-image: url('./images/heros/hero-image_2.jpg');
+    background-position: center;
+    background-color: green;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.hero__inner {
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.hero__title {
+    color: #fff;
+    font-weight: 500;
+    font-size: 36px;
+    text-shadow: 1px 1px 5px gray;
+}
+
+.hero__tagline {
+    color: #fff;
+    margin-top: 16px;
+    font-size: 18px;
+    font-weight: 300;
+    text-shadow: 1px 1px 5px gray;
+}
+
+/*
+ * main
+ */
+
+ main {
+    width: 100%;
+    margin: 0;
+}
+
+/*
+ * content
+ */
+
+ .content {
+    padding: 32px;
+}
+
+/*
+ * resto
+ */
+
+ .resto {
+    width: 100%;
+    margin: 60px auto;
+    text-align: center;
+}
+
+.content__heading {
+    color: #b00d0f;
+    text-align: center;
+    text-shadow: 1px 1px 5px lightgray;
+    font-size: 32px;
+    font-weight: normal;
+}
+
+.content__heading::after {
+    content: '';
+    margin-top: 16px;
+    display: block;
+    border-bottom: 1px solid #eeeeee;
+}
+
+/*
+ * post
+ */
+
+ .posts {
+    margin: 32px auto auto;
+    text-align: left;
+}
+
+/*
+ * post item
+ */
+
+.restaurants-item {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.restaurants {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+    padding: 16px;
+}
+
+.restaurants-item__header__rating {
+    padding: 10px;
+    text-align: right;
+}
+
+.restaurants-item__header__detail {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.restaurants-item__header__poster {
+    width: 100%;
+    height: 250px;
+}
+
+.restaurants-item__city {
+    padding: 10px;
+    font-size: 10px;
+    text-transform: uppercase;
+    color: #999;
+}
+
+.restaurants-item__name {
+    min-height: 44px;
+    min-width: 44px;
+    font-weight: 32px;
+    font-size: 24px;
+    margin-top: 10px;
+    transition: 0.3s opacity;
+}
+
+.restaurants-item__name:hover {
+    opacity: 0.5;
+}
+
+.restaurants-item__name a {
+    padding: 22px;
+    min-height: 44px;
+    text-decoration: none;
+    color: inherit;
+    min-width: 44px;
+}
+
+.restaurants-item__content {
+    padding: 10px;
+}
+
+.restaurants-item__description {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 7; /* number of lines to show */
+    -webkit-box-orient: vertical;
+}
+
+.restaurants-item__button {
+    min-height: 44px;
+    min-width: 44px;
+    margin: 20px;
+    padding: 15px 32px;
+    font-size: 24px;
+    border: none;
+    color: #ffffff;
+    background-color: blue;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 8px;
+}
+
+.restaurants-item__button:hover {
+    background-color: steelblue;
+}
+
+/*
+* halaman detail
+*/
+.restaurant-detail {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    margin: 20px;
+    padding: 15px;
+}
+
+.restaurants__name {
+    text-align: center;
+    margin: 20px;
+    font-size: xx-large;
+}
+
+.restaurants__info {
+    display: grid;
+    grid-template-columns: 2;
+}
+
+.resto_info {
+    border-bottom: 1px solid #b00d0f;
+    margin: 10px;
+    padding-bottom: 4px;
+    text-align: center;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.box1 {
+    padding-left: 4px;
+    border-left: 2px solid #b00d0f;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.box2 {
+    padding-left: 4px;
+    border-left: 2px solid #b00d0f;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.box3 {
+    margin: 10px 0 10px ;
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+/*
+ * footer
+ */
+
+ footer {
+    background-color: #ec9091;
+    padding: 2em;
+    width: 100%;
+    text-align: center;
+    color:#fff;
+    font-weight: bold;
+}
+
+/*
+   Like
+*/
+.like {
+    font-size: 18px;
+    position: fixed;
+    bottom: 16px;
+    right: 16px;
+    background-color: #db0000;
+    color: white;
+    border: 0;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

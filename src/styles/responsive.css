@@ -1,0 +1,142 @@
+@media screen and (max-width: 599px) {
+    .nav {
+        z-index: 10;
+        background-color: #fff;
+        width: 300px;
+        position: absolute;
+        border: 1px solid #fff;
+        border-radius: 5px;
+
+        /* This trasform moves the drawer off canvas. */
+        -webkit-transform: translate(-300px, 120px);
+        transform: translate(-300px, 200px);
+
+        /* Optionally, we animate the drawer. */
+        transition: transform 0.3s ease;
+    }
+
+    .open {
+        -webkit-transform: translate(-10px, 120px);
+        transform: translate(-10px, 200px);
+    }
+
+    .nav__item {
+        background-color: #b00d0f;
+        display: list-item;
+        border: 1px solid #fff;
+        border-radius: 3px;
+        width: 100%;
+        text-align: left;
+    }
+
+    .header {
+        grid-template-rows: 2fr 1fr
+    }
+
+    .header__inner {
+        background-color: #b00d0f;
+    }
+
+    .header__title {
+        color: #fff;
+        text-shadow: 2px 2px 5px #fff;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .header__menu {
+        display: none;
+    }
+
+    .header__title {
+        text-shadow: 2px 2px 5px gray;
+    }
+}
+
+@media screen and (min-width: 650px) {
+    .restaurants-item__content {
+        padding: 16px 32px 32px 32px;
+    }
+
+    .restaurants-item__name {
+        font-size: 18px;
+    }
+
+    .restaurants-item__description {
+        font-size: 14px;
+    }
+
+    .restaurants-item__button {
+        margin: 20px 0 20px 32px;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .restaurants {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 15px;
+        grid-row-gap: 20px;
+    }
+
+    .restaurants-item__image {
+        height: 200px;
+    }
+
+    .restaurants-item__button {
+        margin: 20px 65px 20px 65px;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .nav__list {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .restaurants-item__button {
+        margin: 20px 85px 20px 85px;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .restaurants {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .restaurants-item__button {
+        margin: 20px 30px 20px 30px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .header {
+        background-color: #b00d0f;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .header__inner {
+        text-align: left;
+    }
+
+    .header__title {
+        margin-left: 80px;
+        color: #fff;
+        text-shadow: 2px 2px 5px #fff;
+    }
+
+    .nav {
+        padding-top: 30px;
+    }
+
+    main {
+        max-width: 1200px;
+    }
+
+    .restaurants-item__button {
+        margin: 20px 70px 20px 70px;
+    }
+
+    
+}
